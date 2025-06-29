@@ -18,8 +18,8 @@ export const {
         const adminUser = {
           id: "1",
           name: "Admin",
-          email: "admin@example.com",
-          password: "admin123",
+          email: process.env.EMAIL_LOGIN_ADMIN,
+          password: process.env.PASSWORD_LOGIN_ADMIN,
           role: "admin",
         };
 
