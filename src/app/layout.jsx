@@ -34,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: "Gorden Wall Purwodadi",
     description: "Spesialis gorden berkualitas dengan harga terjangkau",
-    url: "https://gordenwallpurwodadi.com",
+    url: "https://gorden-wall.varcel.com",
     siteName: "Gorden Wall Purwodadi",
     images: [
       {
