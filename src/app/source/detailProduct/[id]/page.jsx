@@ -1,29 +1,3 @@
-// import prisma from "@/components/lib/prisma";
-
-// // Komponen halaman detail produk
-// export default async function DetailProduct({ params }) {
-//   const { id } = await params;
-//   const product = await prisma.product.findUnique({
-//     where: { id: Number(id) },
-//   });
-
-//   if (!product) {
-//     return <div className="p-5 text-red-600">Produk tidak ditemukan.</div>;
-//   }
-
-//   return (
-//     <div className="p-6">
-//       <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-//       <img
-//         src={product.imageUrl}
-//         alt={product.name}
-//         className="w-[300px] h-[300px] object-cover mb-4"
-//       />
-//       <p className="text-lg mb-2">{product.description}</p>
-//       <p className="text-green-600 text-xl font-semibold">Rp {product.price}</p>
-//     </div>
-//   );
-// }
 import prisma from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
