@@ -1,4 +1,10 @@
 import Content from "./content";
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 const Admin = () => {
   return (

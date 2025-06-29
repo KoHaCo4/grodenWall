@@ -1,6 +1,30 @@
 import Contact from "@/components/Contact";
 import Head from "next/head";
 
+export const metadata = {
+  title: "Gorden Wall Purwodadi - Spesialis Gorden Berkualitas",
+  description:
+    "Toko gorden profesional dengan bahan berkualitas dan jahitan presisi. Berpengalaman lebih dari 10 tahun.",
+  keywords: "gorden, tirai, window curtain, gorden purwodadi, groden wall",
+  metadataBase: new URL("https://groden-wall.vercel.app"),
+  openGraph: {
+    title: "Gorden Wall Purwodadi",
+    description:
+      "Tempat terbaik untuk membeli gorden custom berkualitas di Purwodadi.",
+    url: "https://groden-wall.vercel.app",
+    siteName: "Gorden Wall",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Gorden Wall",
+      },
+    ],
+    type: "website",
+  },
+};
+
 export default function ContactPage() {
   return (
     <>

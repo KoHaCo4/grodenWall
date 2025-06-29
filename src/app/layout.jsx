@@ -18,44 +18,26 @@ const robotoMono = Roboto_Mono({
 
 // Metadata aplikasi
 export const metadata = {
-  title: {
-    default: "Gorden Wall Purwodadi",
-    template: "%s | Gorden Wall Purwodadi",
-  },
+  title: "Gorden Wall Purwodadi - Spesialis Gorden Berkualitas",
   description:
-    "Toko gorden profesional dengan bahan berkualitas dan jahitan presisi. Berpengalaman lebih dari 10 tahun di Purwodadi.",
-  keywords: [
-    "gorden purwodadi",
-    "tirai jendela",
-    "gorden custom",
-    "wallpaper dinding",
-    "toko gorden",
-  ],
+    "Toko gorden profesional dengan bahan berkualitas dan jahitan presisi. Berpengalaman lebih dari 10 tahun.",
+  keywords: "gorden, tirai, window curtain, gorden purwodadi, groden wall",
+  metadataBase: new URL("https://groden-wall.vercel.app"),
   openGraph: {
     title: "Gorden Wall Purwodadi",
-    description: "Spesialis gorden berkualitas dengan harga terjangkau",
-    url: "https://gorden-wall.varcel.com",
-    siteName: "Gorden Wall Purwodadi",
+    description:
+      "Tempat terbaik untuk membeli gorden custom berkualitas di Purwodadi.",
+    url: "https://groden-wall.vercel.app",
+    siteName: "Gorden Wall",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
+        alt: "Gorden Wall",
       },
     ],
-    locale: "id_ID",
     type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
