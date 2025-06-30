@@ -27,7 +27,7 @@ export const metadata = {
     title: "GordenKu Grosir",
     description:
       "Tempat terbaik untuk membeli gorden custom berkualitas di Purwodadi.",
-    url: "https://groden-wall.vercel.app",
+    url: "https://groden-wall.vercel.app/og.png",
     siteName: "Gorden Wall",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og.png"],
+    images: ["https://groden-wall.vercel.app/og.png"],
   },
 };
 

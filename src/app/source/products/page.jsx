@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: "GordenKu Grosir",
     description: "Tempat terbaik untuk membeli gorden custom berkualitas.",
-    url: "https://groden-wall.vercel.app",
+    url: "https://groden-wall.vercel.app/og.png",
     siteName: "Gorden Wall",
     images: [
       {
