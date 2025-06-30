@@ -13,10 +13,22 @@ export async function generateMetadata({ params }) {
   if (!product) return {};
 
   return {
-    title: `${product.name} | GordenKu Grosir`,
+    title: `${product.name} | Gorden Wall Purwodadi`,
     description: product.description,
     openGraph: {
-      images: [product.imageUrl],
+      title: product.name,
+      description: product.description,
+      url: `https://groden-wall.vercel.app/source/detailProduct/${id}`,
+      siteName: "Gorden Wall",
+      images: [
+        {
+          url: `https://groden-wall.vercel.app${product.imageUrl}`,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+      type: "product",
     },
   };
 }
