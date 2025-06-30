@@ -112,6 +112,7 @@ export default async function DetailProduct({ params }) {
             <button className="flex-1 md:flex-none bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
               <a href={pesanURL}>Pesan Sekarang</a>
             </button>
+
             {/* <button className="flex-1 md:flex-none border border-sky-600 text-sky-600 hover:bg-sky-50 px-8 py-3 rounded-lg font-medium transition-colors">
               Tambah ke Wishlist
             </button> */}
