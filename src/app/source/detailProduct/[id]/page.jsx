@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
           alt: product.name,
         },
       ],
-      type: "product",
+      type: "website",
     },
   };
 }
