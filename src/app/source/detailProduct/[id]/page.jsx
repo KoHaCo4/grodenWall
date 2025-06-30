@@ -33,9 +33,9 @@ export default async function DetailProduct({ params }) {
 
   const pesanText = `Halo Admin, saya tertarik dengan produk:\n\n*${
     product.name
-  }*\nHarga: Rp ${product.price.toLocaleString("id-ID")}\n\nGambar: ${
-    product.imageUrl
-  }`;
+  }*\nHarga: Rp ${product.price.toLocaleString(
+    "id-ID"
+  )}\n\nhttps://groden-wall.vercel.app/${product.imageUrl}`;
   const pesanURL = `https://wa.me/6281324842510?text=${encodeURIComponent(
     pesanText
   )}`;
