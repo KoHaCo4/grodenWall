@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   if (!product) return {};
 
   return {
-    title: `${product.name} | Gorden Wall Purwodadi`,
+    title: `${product.name} | GordenKu Grosir`,
     description: product.description,
     openGraph: {
       images: [product.imageUrl],
@@ -30,6 +30,15 @@ export default async function DetailProduct({ params }) {
   if (!product) {
     notFound();
   }
+
+  const pesanText = `Halo Admin, saya tertarik dengan produk:\n\n*${
+    product.name
+  }*\nHarga: Rp ${product.price.toLocaleString("id-ID")}\n\nGambar: ${
+    product.imageUrl
+  }`;
+  const pesanURL = `https://wa.me/6281324842510?text=${encodeURIComponent(
+    pesanText
+  )}`;
 
   return (
     <main className="container mx-auto px-4 py-32">
@@ -89,11 +98,11 @@ export default async function DetailProduct({ params }) {
 
           <div className="flex flex-wrap gap-4 pt-6">
             <button className="flex-1 md:flex-none bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-              Pesan Sekarang
+              <a href={pesanURL}>Pesan Sekarang</a>
             </button>
-            <button className="flex-1 md:flex-none border border-sky-600 text-sky-600 hover:bg-sky-50 px-8 py-3 rounded-lg font-medium transition-colors">
+            {/* <button className="flex-1 md:flex-none border border-sky-600 text-sky-600 hover:bg-sky-50 px-8 py-3 rounded-lg font-medium transition-colors">
               Tambah ke Wishlist
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

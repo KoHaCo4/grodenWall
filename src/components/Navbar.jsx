@@ -51,14 +51,16 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-white hover:text-sky-400 transition-colors flex items-center"
+            className="text-2xl font-bold text-white hover:text-sky-400 transition-colors flex -py-4 items-center"
           >
+            {/* <span className=" w-auto">G</span> */}
             <img
               src="/img/logo.png"
               alt="Logo"
               className="h-16 w-auto object-contain"
             />
-            <span className="sm:hidden">GWS</span>
+            {/* <span className=" w-auto">RDENKU</span> */}
+            <span className="sm:hidden">GG</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -88,7 +90,7 @@ const Navbar = () => {
               aria-label="login"
               type="button"
             >
-              Log-In
+              Log-In Admin
             </button>
           )}
 

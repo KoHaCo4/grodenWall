@@ -18,13 +18,13 @@ const robotoMono = Roboto_Mono({
 
 // Metadata aplikasi
 export const metadata = {
-  title: "Gorden Wall Purwodadi - Spesialis Gorden Berkualitas",
+  title: "GordenKu Grosir - Spesialis Gorden Berkualitas",
   description:
     "Toko gorden profesional dengan bahan berkualitas dan jahitan presisi. Berpengalaman lebih dari 10 tahun.",
-  keywords: "gorden, tirai, window curtain, gorden purwodadi, groden wall",
+  keywords: "gorden, tirai, window curtain, gorden, groden wall",
   metadataBase: new URL("https://groden-wall.vercel.app"),
   openGraph: {
-    title: "Gorden Wall Purwodadi",
+    title: "GordenKu Grosir",
     description:
       "Tempat terbaik untuk membeli gorden custom berkualitas di Purwodadi.",
     url: "https://groden-wall.vercel.app",
@@ -34,7 +34,7 @@ export const metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Gorden Wall",
+        alt: "GordenKu Grosir",
       },
     ],
     type: "website",

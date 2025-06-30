@@ -27,8 +27,8 @@ const Footer = () => {
               loading="lazy"
             />
             <p className="text-sm leading-relaxed text-gray-600">
-              Spesialis gorden dan wallpaper berkualitas di Purwodadi dengan
-              harga terjangkau dan pelayanan terbaik.
+              Spesialis gorden dan wallpaper berkualitas dengan harga terjangkau
+              dan pelayanan terbaik.
             </p>
 
             <div className="flex items-center gap-2 text-sm">
@@ -118,7 +118,7 @@ const Footer = () => {
                     href="mailto:info@gordenwallPurwodadi.com"
                     className="text-gray-600 hover:text-sky-600 transition-colors"
                   >
-                    info@gordenwallPurwodadi.com
+                    info@gordenkugrosir.com
                   </a>
                 </div>
               </li>
@@ -203,9 +203,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="bg-gray-100 py-4">
         <div className="container mx-auto px-4 text-center text-sm text-gray-500">
-          <p>
-            © {currentYear} Gorden Wallpaper Purwodadi. All rights reserved.
-          </p>
+          <p>© {currentYear} GordenKu Grosir. All rights reserved.</p>
           <p className="mt-1">Designed with ❤️ in Purwodadi, Indonesia</p>
         </div>
       </div>
