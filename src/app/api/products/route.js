@@ -3,7 +3,14 @@ import prisma from "@/lib/prisma";
 import { writeFile } from "fs/promises";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
+import { v2 as cloudinary } from "cloudinary";
+import { error } from "console";
 
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 // GET /api/products
 export async function GET() {
   try {
@@ -30,15 +37,26 @@ export async function POST(req) {
   if (!imageFile || typeof imageFile === "string") {
     return NextResponse.json({ error: "Gambar tidak valid." }, { status: 400 });
   }
-
-  // Bikin nama file unik
-  const fileName = `${uuidv4()}-${imageFile.name}`;
-  const uploadDir = path.join(process.cwd(), "public", "uploads");
-  const filePath = path.join(uploadDir, fileName);
-
-  // Simpan file ke folder public/uploads
+  // Convert the image file to buffer
   const bytes = await imageFile.arrayBuffer();
-  await writeFile(filePath, Buffer.from(bytes));
+  const buffer = Buffer.from(bytes);
+
+  //Upload gambar ke cloudinary
+  const result = await new Promise((resolve, reject) => {
+    cloudinary.uploader
+      .upload_stream(
+        {
+          folder: "products",
+          format: "webp",
+          quality: "auto:good",
+        },
+        (error, result) => {
+          if (error) return reject(error);
+          resolve(result);
+        }
+      )
+      .end(buffer);
+  });
 
   // Simpan ke database
   const newProduct = await prisma.product.create({
@@ -46,7 +64,7 @@ export async function POST(req) {
       name,
       description,
       price,
-      imageUrl: `/uploads/${fileName}`,
+      imageUrl: result.secure_url,
     },
   });
 
