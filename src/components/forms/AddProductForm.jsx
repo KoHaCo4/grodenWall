@@ -41,6 +41,7 @@ export default function AddProductForm() {
         price: "",
         image: null,
       });
+      window.location.reload;
     } else {
       toast.error("Gagal menambahkan produk.");
     }
