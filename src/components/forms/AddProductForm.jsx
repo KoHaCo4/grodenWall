@@ -4,7 +4,7 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function AddProductForm() {
-  const [isSubmiting, setIsSubmiting] = useState(true);
+  const [isSubmiting, setIsSubmiting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -23,6 +23,7 @@ export default function AddProductForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     const data = new FormData();
     data.append("name", formData.name);
     data.append("description", formData.description);
