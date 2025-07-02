@@ -4,6 +4,7 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function AddProductForm() {
+  const [isSubmiting, setIsSubmiting] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -45,6 +46,8 @@ export default function AddProductForm() {
     } else {
       toast.error("Gagal menambahkan produk.");
     }
+
+    setIsSubmiting(false);
   };
 
   return (
@@ -106,7 +109,7 @@ export default function AddProductForm() {
         type="submit"
         className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
       >
-        Tambah Produk
+        {isSubmiting ? "Mengunggah..." : "Tambah Produk"}
       </button>
       <Toaster position="top-center" />
     </form>
